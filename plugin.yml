@@ -1,0 +1,6 @@
+name: BookCopier
+main: BookCopier.BookCopier
+version: 1.0
+commands:
+    bc:
+        description: Main command

@@ -22,6 +22,7 @@ public class Commands
 		if(args.length == 0)
 		{
 			commandSender.sendMessage(ChatColor.RED + "Type: \"/bc help\" for more informations.");
+			return;
 		}
 		
 		if(args[0].toLowerCase().matches("help"))
@@ -33,6 +34,8 @@ public class Commands
 				commandSender.sendMessage("[] - optional arguments");
 				commandSender.sendMessage(ChatColor.YELLOW + "* " + ChatColor.WHITE + "/bc copy [value] - Copies book in your hand.(No value means 1*)");
 				commandSender.sendMessage(ChatColor.YELLOW + "* " + ChatColor.WHITE + "/bc give <player> [value] - Adds book in your hand to target player's inventory.");
+				commandSender.sendMessage(ChatColor.YELLOW + "* " + ChatColor.WHITE + "/bc save <fileName> - Saves book in your hand to file.");
+				commandSender.sendMessage(ChatColor.YELLOW + "* " + ChatColor.WHITE + "/bc load <fileName> - Loads book from file to your inventory.");
 			}
 		}
 		

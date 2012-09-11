@@ -1,40 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <title>Bookcopier by rikub</title>
-  </head>
+  <title>Bookcopier</title>
+  <meta name="description" content="Faster than paper copier!">
 
-  <body>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
     <header>
-      <div class="inner">
-        <h1>Bookcopier</h1>
-        <h2>Faster than paper copier!</h2>
-        <a href="https://github.com/rikub/BookCopier" class="button"><small>View project on</small>GitHub</a>
-      </div>
+      <h1 class="title">Bookcopier</h1>
     </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+    <div id="container">
+      <p class="tagline">Faster than paper copier!</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/rikub/BookCopier/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/rikub/BookCopier/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/rikub/BookCopier" class="code">View Bookcopier on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
           <h2>What is it?</h2>
 
-<p>Book copier is a Minecraft plugin for Bukkit API. It's completely open-source. You can browse, download and integrate my source to your project.</p>
+<p>Book copier is a Minecraft plugin for Bukkit API. It's completely open-source. You can browse, download and integrate my code to your project.</p>
 
 <h2>Features</h2>
 
-<p>With BookCopier is administration of writable books much easier! You can copy or send books to target user.</p>
+<p>With BookCopier is administration of writable books much easier! You can copy or send books to target user and backup them to files. You can naturally load them back. </p>
+
+<h3>How to save book to file</h3>
+
+<p>It's simpe. Only type /bc save  when you're holding writable book. File with backup will be saved to <em>plugins/BookCopier/fileName.book</em></p>
+
+<h3>How to load book from file</h3>
+
+<p>Type /bc load . File named "fileName" must be in directory <em>plugins/BookCopier</em>.</p>
+
+<h3>How to edit or create .book files</h3>
+
+<p>.book format is standart .txt only different named. You can open it in Notepad or Notepad++. If you wont to create it you must abide few rules.
+This is conception of file:</p>
+
+<pre><code>title: default
+author: default
+pages: page1,page2
+</code></pre>
+
+<p>Pages are separated by comma. Maximum are 20 pages (limited by MC).</p>
 
 <h2>Commands</h2>
 
@@ -44,36 +72,37 @@
 <pre><code>/bc help - Shows commands and info about plugin.
 /bc copy [value] - Copies book in your hand.
 /bc give &lt;player&gt; [value] - Gives book in your hand target player.
+/bc load &lt;fileName&gt; - Loads book from file to your inventory.
+/bc save &lt;fileName&gt; - Saves book in your hand to file.
 </code></pre>
 
 <h2>Upcoming features</h2>
 
 <p>"First login book" - When player joins server for first time, plugin gives him book what you specified in file automaticaly!</p>
 
-<p>You'll be able to load books from file!</p>
-
 <h2>About author</h2>
 
 <p>I'm Richard, 16 years old programmer. I own Minecraft server...come and try: <a href="http://mineandcraft.cz/">here</a></p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/rikub/BookCopier/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/rikub/BookCopier/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/rikub/BookCopier"></a> is maintained by <a href="https://github.com/rikub">rikub</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+        </article>
       </div>
     </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/rikub" class="avatar"><img src="https://secure.gravatar.com/avatar/6ff993ad60d89548715867e70e413624?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/rikub">rikub</a> maintains <a href="https://github.com/rikub/BookCopier">Bookcopier</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/rikub/BookCopier/tarball/master" class="tar">tar</a><a href="https://github.com/rikub/BookCopier/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
 
   
-  </body>
+</body>
 </html>
